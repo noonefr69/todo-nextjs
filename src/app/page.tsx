@@ -1,4 +1,6 @@
+import AddPost from "@/components/AddPost";
 import LilProf from "@/components/LilProf";
+import Posts from "@/components/Posts";
 
 export default function Home() {
   return (
@@ -6,7 +8,10 @@ export default function Home() {
       <div className="col-span-3">
         <LilProf />
       </div>
-      <div className="col-span-6">world</div>
+      <div className="col-span-6 space-y-5">
+        <AddPost />
+        <Posts />
+      </div>
     </div>
   );
 }
