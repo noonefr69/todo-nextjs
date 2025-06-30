@@ -2,10 +2,11 @@ import React from "react";
 import Checked from "./Checked";
 import { auth } from "@/auth";
 import { Heart } from "lucide-react";
+import axios from "axios";
 
 export default async function Posts() {
-  const res = await fetch(`http://localhost:3000/api/data`);
-  const datas = await res.json();
+  const res = await axios.get(`http://localhost:3000/api/data`);
+  const datas = await res.data;
   const session = await auth();
   const user = session?.user;
 

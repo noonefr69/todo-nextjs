@@ -10,12 +10,12 @@ export default function Checked(params: any) {
       <Checkbox
         checked={check}
         onCheckedChange={() => setCheck(!check)}
-        className="cursor-pointer"
+        className="cursor-pointer duration-200"
       />{" "}
       <p
         className={`${
-          check ? `line-through ` : ""
-        } text-lg font-semibold break-words overflow-hidden`}
+          check ? `line-through opacity-55 ` : ""
+        } text-lg font-semibold break-words overflow-hidden duration-200`}
       >
         {params.data}
       </p>
