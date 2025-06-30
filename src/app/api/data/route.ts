@@ -3,7 +3,9 @@ import Post from "@/lib/model/Post";
 
 export async function GET() {
   await dbConnect();
+
   const users = await Post.find({});
+  
   return new Response(JSON.stringify(users), {
     status: 200,
     headers: { "Content-Type": "application/json" },

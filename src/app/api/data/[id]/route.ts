@@ -44,29 +44,28 @@ export async function DELETE(
   });
 }
 
-// PATCH a post by ID
-// export async function PATCH(
-//   req: Request,
-//   { params }: { params: { id: string } }
-// ) {
-//   await dbConnect();
+export async function PATCH(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
+  await dbConnect();
 
-//   const { id } = params;
-//   const body = await req.json();
+  const { id } = params;
+  const body = await req.json();
 
-//   const updatedPost = await Post.findByIdAndUpdate(
-//     id,
-//     { $set: body },
-//     { new: true } // Return updated doc
-//   );
+  const updatedPost = await Post.findByIdAndUpdate(
+    id,
+    { $set: body },
+    { new: true } 
+  );
 
-//   if (!updatedPost) {
-//     return new Response(JSON.stringify({ error: "Not found" }), {
-//       status: 404,
-//     });
-//   }
+  if (!updatedPost) {
+    return new Response(JSON.stringify({ error: "Not found" }), {
+      status: 404,
+    });
+  }
 
-//   return new Response(JSON.stringify(updatedPost), {
-//     status: 200,
-//   });
-// }
+  return new Response(JSON.stringify(updatedPost), {
+    status: 200,
+  });
+}

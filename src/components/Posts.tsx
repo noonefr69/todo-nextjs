@@ -3,15 +3,19 @@ import Checked from "./Checked";
 import { auth } from "@/auth";
 import { Heart } from "lucide-react";
 import axios from "axios";
+import Delete from "./Delete";
+import Edit from "./Edit";
 
-export default async function Posts() {
+export default async function Posts({params} : any) {
   const res = await axios.get(`http://localhost:3000/api/data`);
   const datas = await res.data;
   const session = await auth();
   const user = session?.user;
 
+  console.log(params)
+
   return user ? (
-    <div className="flex shadow-xl flex-col justify-center border-2 rounded-xl p-5">
+    <div className="flex shadow-xl flex-col border-2 rounded-xl p-5 min-h-screen">
       <ul className="flex flex-col gap-4">
         {datas.map((data: any) => (
           <li
@@ -22,8 +26,8 @@ export default async function Posts() {
               <Checked data={data.text} />
             </div>
             <div className="flex items-center gap-4">
-              <button>edit</button>
-              <button>delete</button>
+              {/* <Edit id={data._id}/> */}
+              <Delete id={data._id} />
             </div>
           </li>
         ))}
