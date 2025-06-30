@@ -8,10 +8,10 @@ export default function NavBar() {
     <div className="mb-9">
       <nav className="flex justify-between items-center px-5 py-8 border-b-2">
         <Link className="font-semibold text-2xl" href={`/`}>
-          Twit
+          ToDo
         </Link>
         <div className="flex items-center gap-8">
-          <Authentication />
+          {/* <Authentication /> */}
           <Toggler />
         </div>
       </nav>
