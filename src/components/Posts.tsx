@@ -38,22 +38,24 @@ export default async function Posts({ params }: any) {
       <>
         <div className="flex items-center shadow-xl flex-col justify-center border-2 rounded-xl p-5 min-h-[calc(100vh-37vh)]">
           <h1 className="font-semibold text-2xl animate-bounce">
-            <Ghost size={100}/>
+            <Ghost size={100} />
           </h1>
-          <h1 className="font-semibold text-2xl mt-4 animate-pulse">Your ToDo is Empty</h1>
+          <h1 className="font-semibold text-2xl mt-4 animate-pulse">
+            Your ToDo is Empty
+          </h1>
         </div>
       </>
     )
   ) : (
     <>
-      <div className="flex items-center shadow-xl flex-col justify-center border-2 rounded-xl p-5 min-h-[calc(100vh-37vh)]">
+      <div className="flex items-center shadow-xl flex-col justify-center border-2 rounded-xl p-5 min-h-[calc(100vh-18vh)]">
         <h1 className="font-semibold text-2xl mb-4">
           For Start ToDo first Sign In
         </h1>
-        <h3 className="font-semibold text-lg text-center flex flex-col items-center gap-2 dark:text-gray-400 text-black">
+        <h3 className="font-semibold text-lg text-center flex flex-col items-center gap-2 opacity-50">
           You can Sign in with Sign In button in your left or navigation bar{" "}
-          <Heart />
         </h3>
+        <Heart  className="mt-4 text-transparent shadow-2xl" fill="red"/>
       </div>
     </>
   );

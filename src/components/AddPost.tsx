@@ -1,9 +1,11 @@
 import { handlePost } from "@/actions/handlePost";
-import axios from "axios";
+import { auth } from "@/auth";
 import { Plus } from "lucide-react";
 
-export default function AddPost() {
-  return (
+export default async function AddPost() {
+  const session = await auth();
+  const user = session?.user;
+  return user ? (
     <div className="flex shadow-xl flex-col justify-center items-center border-2 rounded-xl h-40">
       <form
         className="flex items-center w-full px-5 space-x-5"
@@ -21,5 +23,7 @@ export default function AddPost() {
         </button>
       </form>
     </div>
+  ) : (
+    ""
   );
 }
