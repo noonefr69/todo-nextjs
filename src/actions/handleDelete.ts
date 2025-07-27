@@ -13,7 +13,7 @@ export default async function handleDelete(formData: FormData) {
     throw new Error("No ID provided");
   }
 
-  revalidatePath("/");
-
   await Post.findByIdAndDelete(id);
+
+  revalidatePath("/");
 }

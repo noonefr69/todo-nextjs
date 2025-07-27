@@ -10,7 +10,7 @@ export async function handlePost(formData: FormData) {
     throw new Error(`there is no input`);
   }
 
-  axios.post("http://localhost:3000/api/data", { text });
+  await axios.post("http://localhost:3000/api/data", { text });
+  
   revalidatePath("/");
-  console.log(`its from server action ${text}`);
 }
