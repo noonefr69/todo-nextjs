@@ -1,4 +1,5 @@
 import AddPost from "@/components/AddPost";
+import CalendarBar from "@/components/CalendarBar";
 import LilProf from "@/components/LilProf";
 import Posts from "@/components/Posts";
 
@@ -11,6 +12,9 @@ export default function Home() {
       <div className="col-span-6 space-y-5">
         <AddPost />
         <Posts />
+      </div>
+      <div className="col-span-3">
+        <CalendarBar />
       </div>
     </div>
   );
