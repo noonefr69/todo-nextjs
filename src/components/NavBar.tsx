@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Toggler } from "./Toggler";
-import Authentication from "./Authentication";
+// import Authentication from "./Authentication";
 
 export default function NavBar() {
   return (

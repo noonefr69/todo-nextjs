@@ -1,5 +1,5 @@
-import { auth, signIn, signOut } from "@/auth";
-import { GiftIcon, Github } from "lucide-react";
+import { auth, signIn } from "@/auth";
+import { Github } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import unknown from "../../public/unknown.jpg";

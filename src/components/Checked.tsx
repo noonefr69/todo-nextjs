@@ -3,7 +3,11 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 
-export default function Checked(params: any) {
+interface Props {
+  data: string;
+}
+
+export default function Checked(params: Props) {
   const [check, setCheck] = useState(false);
   return (
     <div className="flex items-center gap-4">

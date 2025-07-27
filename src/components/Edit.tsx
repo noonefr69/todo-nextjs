@@ -1,7 +1,11 @@
 import handleEdit from "@/actions/handleEdit";
 import { Edit } from "lucide-react";
 
-export default function Delete({id} : any) {
+interface Props {
+  id: string;
+}
+
+export default function Delete({ id }: Props) {
   return (
     <div>
       <form action={handleEdit}>
