@@ -15,7 +15,7 @@ export default async function Authentication() {
         <Avatar className="scale-110 border-2 border-transparent duration-200 hover:border-[#2e2e2e] dark:hover:border-white">
           <AvatarImage src={user?.image ?? undefined} />
           <AvatarFallback>
-            <Image src={unknown} alt="kir" />
+            <Image src={unknown} alt="unknown" />
           </AvatarFallback>
         </Avatar>
       </Link>

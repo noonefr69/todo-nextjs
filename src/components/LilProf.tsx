@@ -37,7 +37,7 @@ export default async function LilProf() {
     </div>
   ) : (
     <div className="flex shadow-xl flex-col justify-center items-center border-2 rounded-xl h-80">
-      <h1 className="flex items-center gap-2 font-semibold text-xl mb-2">Welcome To Twit <Smile /></h1>
+      <h1 className="flex items-center gap-2 font-semibold text-xl mb-2">Welcome To ToDo <Smile /></h1>
       <p className="font-semibold text-xl text-center mb-6">Let’s sign in to begin the journey</p>
       <form
         action={async () => {

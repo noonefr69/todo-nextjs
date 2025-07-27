@@ -12,8 +12,6 @@ export default async function Posts({ params }: any) {
   const session = await auth();
   const user = session?.user;
 
-  console.log(params);
-
   return user ? (
     datas && datas.length > 0 ? (
       <div className="flex shadow-xl flex-col border-2 rounded-xl p-5 min-h-[calc(100vh-37vh)]">
@@ -53,7 +51,7 @@ export default async function Posts({ params }: any) {
           For Start ToDo first Sign In
         </h1>
         <h3 className="font-semibold text-lg text-center flex flex-col items-center gap-2 opacity-50">
-          You can Sign in with Sign In button in your left or navigation bar{" "}
+          You can Sign in with Sign In button in your left {" "}
         </h3>
         <Heart  className="mt-4 text-transparent shadow-2xl" fill="red"/>
       </div>
